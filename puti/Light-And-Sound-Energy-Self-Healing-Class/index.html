@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>光音能量自疗课 - 一天掌握疗愈自己与家人的力量</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-image {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .chakra-image {
+            background-image: url('https://images.unsplash.com/photo-1607602132700-0682843e1be5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion.active .accordion-content {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-amber-50 text-gray-800">
+    <!-- 导航栏 -->
+    <nav class="bg-amber-100 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="text-2xl font-bold text-amber-800 flex items-center">
+                <i class="fas fa-sun text-amber-600 mr-2"></i>
+                光音能量自疗课
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="text-amber-800 hover:text-amber-600 transition">首页</a>
+                <a href="#course" class="text-amber-800 hover:text-amber-600 transition">课程内容</a>
+                <a href="#teacher" class="text-amber-800 hover:text-amber-600 transition">导师介绍</a>
+                <a href="#register" class="text-amber-800 hover:text-amber-600 transition">报名详情</a>
+                <a href="#faq" class="text-amber-800 hover:text-amber-600 transition">常见问题</a>
+            </div>
+            <button class="md:hidden text-amber-800" id="mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- 移动端菜单 -->
+        <div class="md:hidden hidden bg-amber-50 px-4 py-2" id="mobile-menu">
+            <a href="#home" class="block py-2 text-amber-800 hover:text-amber-600 transition">首页</a>
+            <a href="#course" class="block py-2 text-amber-800 hover:text-amber-600 transition">课程内容</a>
+            <a href="#teacher" class="block py-2 text-amber-800 hover:text-amber-600 transition">导师介绍</a>
+            <a href="#register" class="block py-2 text-amber-800 hover:text-amber-600 transition">报名详情</a>
+            <a href="#faq" class="block py-2 text-amber-800 hover:text-amber-600 transition">常见问题</a>
+        </div>
+    </nav>
+
+    <!-- 首页 -->
+    <section id="home" class="hero-image py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center bg-white bg-opacity-90 p-8 rounded-lg shadow-lg">
+                <h1 class="text-4xl md:text-5xl font-bold text-amber-800 mb-4">【光音能量自疗课】—— 无药自疗公益课</h1>
+                <h2 class="text-2xl md:text-3xl text-amber-600 mb-8">一天，让您成为家庭的疗愈师。用无条件的爱，疗愈自己，守护家人。</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-amber-50 p-4 rounded-lg flex items-start">
+                        <i class="fas fa-heart text-amber-600 text-2xl mr-3 mt-1"></i>
+                        <div>
+                            <h3 class="font-bold text-amber-800">超值公益价</h3>
+                            <p class="text-gray-700">仅需 ¥999 (原价 ¥3999)</p>
+                        </div>
+                    </div>
+                    <div class="bg-amber-50 p-4 rounded-lg flex items-start">
+                        <i class="fas fa-gift text-amber-600 text-2xl mr-3 mt-1"></i>
+                        <div>
+                            <h3 class="font-bold text-amber-800">两大免费政策</h3>
+                            <p class="text-gray-700">9-18岁孩子 & 60岁以上老人 完全免费！</p>
+                        </div>
+                    </div>
+                    <div class="bg-amber-50 p-4 rounded-lg flex items-start">
+                        <i class="fas fa-infinity text-amber-600 text-2xl mr-3 mt-1"></i>
+                        <div>
+                            <h3 class="font-bold text-amber-800">终身福利</h3>
+                            <p class="text-gray-700">一次报名，终身免费复训</p>
+                        </div>
+                    </div>
+                    <div class="bg-amber-50 p-4 rounded-lg flex items-start">
+                        <i class="fas fa-child text-amber-600 text-2xl mr-3 mt-1"></i>
+                        <div>
+                            <h3 class="font-bold text-amber-800">零基础入门</h3>
+                            <p class="text-gray-700">22种实用手法，9至92岁都能轻松学会</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="text-xl italic text-amber-700 mb-8">"愿每个家庭，都有一位充满爱的光音自疗师。"</p>
+                
+                <a href="#register" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">
+                    立即为家人锁定公益名额
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 课程内容 -->
+    <section id="course" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-amber-800 mb-12">您将收获什么？22种核心自疗手法全景解析</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <!-- 板块一 -->
+                <div class="bg-amber-50 rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-amber-600 text-white p-4">
+                        <h3 class="text-xl font-bold flex items-center">
+                            <i class="fas fa-seedling mr-2"></i> 疗愈基础 · 开启你的疗愈潜能
+                        </h3>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-gray-700 mb-4">这是成为疗愈师的第一步。我们将教您如何激活内在的疗愈力，并建立一个安全、高效的能量场。</p>
+                        <img src="assets/images/2321756467341_.pic.jpg" alt="疗愈基础图片" class="w-full rounded-lg mb-4">
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <span>激活疗愈之手</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <span>激活疗愈之心</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <span>开启疗愈之眼</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <span>疗愈前的保护罩设置</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <span>疗愈真言</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <span>加强疗愈的方法</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <span>疗愈效果持续的方法</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 板块二 -->
+                <div class="bg-amber-50 rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-amber-600 text-white p-4">
+                        <h3 class="text-xl font-bold flex items-center">
+                            <i class="fas fa-bolt mr-2"></i> 能量管理 · 成为能量的主人
+                        </h3>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-gray-700 mb-4">学会感知、清理和补充能量，是自我疗愈的关键。本模块将教您实用的能量管理技术，让您时刻保持身心能量的平衡与充沛。</p>
+                        <img src="assets/images/2361756467376_.pic.jpg" alt="能量管理图片" class="w-full rounded-lg mb-4">
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <span>去除全身病气的方法</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <span>补充全身能量的方法</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <span>测量能量的方法</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <span>看到能量的方法</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <span>光音能量疗愈的五个步骤</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 板块三 -->
+                <div class="bg-amber-50 rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-amber-600 text-white p-4">
+                        <h3 class="text-xl font-bold flex items-center">
+                            <i class="fas fa-spa mr-2"></i> 七轮平衡 · 从根源疗愈身心
+                        </h3>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-gray-700 mb-4">针对人体七大主要能量中心（脉轮）进行深度疗愈，有效改善腹部、胃部、心脏、喉咙、头部等对应区域的健康问题。</p>
+                        <img src="assets/images/mailun.jpg" alt="脉轮图片" class="w-full rounded-lg mb-4">
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <span>平衡海底轮(腹部)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <span>平衡肚轮(腹部)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <span>平衡太阳轮(胃部)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <span>平衡心轮(心脏胸部)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <span>平衡喉轮(喉咙)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <span>平衡眉心轮(松果体)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <span>平衡顶轮(头部)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 板块四 -->
+                <div class="bg-amber-50 rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-amber-600 text-white p-4">
+                        <h3 class="text-xl font-bold flex items-center">
+                            <i class="fas fa-shield-alt mr-2"></i> 疗愈师守护 · 持久而安全的疗愈
+                        </h3>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-gray-700 mb-4">专业的疗愈师不仅要疗愈他人，更要懂得保护自己。本模块将教授疗愈师自我关怀的核心方法。</p>
+                        <img src="assets/images/2331756467351_.pic.jpg" alt="疗愈师守护图片" class="w-full rounded-lg mb-4">
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <span>防止能量外泄的方法</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <span>疗愈后排除自我病气的方法</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <span>疗愈时的注意事项</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="#register" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">
+                    立即报名学习
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 导师介绍 -->
+    <section id="teacher" class="py-16 bg-amber-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-amber-800 mb-12">与您同行的资深疗愈导师：菩提</h2>
+            
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-8 max-w-5xl mx-auto">
+                <div class="w-full md:w-1/3">
+                    <img src="assets/images/puti.jpg" 
+                         alt="菩提导师" class="w-full rounded-lg shadow-lg">
+                </div>
+                
+                <div class="w-full md:w-2/3">
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold text-amber-700 mb-4">权威资质认证</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-certificate text-amber-600 mr-2"></i>
+                                <span>高级能量疗愈导师</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-certificate text-amber-600 mr-2"></i>
+                                <span>高级心理咨询师</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-certificate text-amber-600 mr-2"></i>
+                                <span>高级健康管理师</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-certificate text-amber-600 mr-2"></i>
+                                <span>资深亲子蜕变导师</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-certificate text-amber-600 mr-2"></i>
+                                <span>生命科学技术教练</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold text-amber-700 mb-4">导师故事</h3>
+                        <div class="space-y-4 text-gray-700">
+                            <p class="italic">"她的足迹遍布世界，融汇了超过60位东西方导师的智慧精髓。"</p>
+                            <p>"拥有十余年一线教学经验，她独创的疗愈课程已帮助无数生命转化，离苦得乐。"</p>
+                            <p class="italic">"她的愿心，是让这套简单、有效的自疗方法走进千家万户，让爱与健康的光芒照亮每一个家庭。"</p>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 报名详情 -->
+    <section id="register" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-amber-800 mb-12">立即加入我们，开启您和家人的疗愈之旅</h2>
+            
+            <div class="max-w-4xl mx-auto bg-amber-50 rounded-xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-2xl font-bold text-amber-700 mb-6">课程信息</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-bold text-amber-800 mb-2">开课时间</h4>
+                                <p>2025年9月22日 (周一)</p>
+                                <p>上午：9:00 - 12:00</p>
+                                <p>下午：14:00 - 18:00</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-bold text-amber-800 mb-2">开课地点</h4>
+                                <p>中国 · 哈尔滨</p>
+                                <p class="text-sm">(详细地址将在报名后通知)</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-bold text-amber-800 mb-2">报名方式</h4>
+                                <img src="assets/images/qcode.jpg" alt="报名二维码" class="w-3/4 mx-auto rounded-lg block">
+                            </div>
+                            
+                            <div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 bg-amber-100 p-8">
+                        <h3 class="text-2xl font-bold text-amber-700 mb-6">课程投资方案</h3>
+                        
+                        <div class="bg-white rounded-lg p-6 shadow-inner mb-6">
+                            <div class="text-center mb-4">
+                                <span class="text-4xl font-bold text-amber-700">¥ 999</span>
+                                <span class="text-gray-500 line-through ml-2">¥3999</span>
+                            </div>
+                            <p class="text-center text-gray-700 mb-4">公益特惠价 / 人</p>
+                            <div class="text-center">
+                                <span class="inline-block bg-amber-600 text-white px-3 py-1 rounded-full text-sm">限时优惠</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-6 shadow-inner mb-6">
+                            <h4 class="font-bold text-amber-800 mb-3">【两大免费政策，让爱流动】</h4>
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-child text-amber-600 mr-2"></i>
+                                <span>青少年免费：9 - 18周岁 (凭身份证件)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-user-tie text-amber-600 mr-2"></i>
+                                <span>长者免费：60周岁及以上 (凭身份证件)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-6 shadow-inner">
+                            <h4 class="font-bold text-amber-800 mb-3">【一个终身承诺】</h4>
+                            <div class="flex items-center">
+                                <i class="fas fa-infinity text-amber-600 mr-2"></i>
+                                <span>免费复训：一次报名，即可终身免费参加同主题课程复训！</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-amber-600 p-6 text-center">
+                    <a href="#" class="inline-block bg-white hover:bg-gray-100 text-amber-700 font-bold py-4 px-12 rounded-full text-xl transition duration-300 transform hover:scale-105 shadow-lg" id="register-link">
+                        我要报名，守护家人健康
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题 -->
+    <section id="faq" class="py-16 bg-amber-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-amber-800 mb-12">常见问题与温馨提示</h2>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- 问题1 -->
+                <div class="accordion bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="accordion-btn w-full text-left p-4 font-bold text-amber-800 hover:bg-amber-100 transition flex justify-between items-center">
+                        <span>我没有任何医学或能量疗愈背景，真的能学会吗？</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content px-4">
+                        <div class="pb-4 text-gray-700">
+                            <p>当然可以！本课程专为零基础学员设计，内容深入浅出，手法简单易学。菩提导师拥有丰富的教学经验，确保9岁到92岁的学员都能在一天内掌握核心方法。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 问题2 -->
+                <div class="accordion bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="accordion-btn w-full text-left p-4 font-bold text-amber-800 hover:bg-amber-100 transition flex justify-between items-center">
+                        <span>这是一种医疗手段吗？可以替代医院的治疗吗？</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content px-4">
+                        <div class="pb-4 text-gray-700">
+                            <p>请注意，光音能量自疗是一种自然的身心能量平衡方法，属于辅助健康管理的范畴，不能替代专业的医疗诊断和治疗。我们鼓励您在接受任何医疗方案的同时，将其作为促进身心和谐、提升自愈力的有效补充。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 问题3 -->
+                <div class="accordion bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="accordion-btn w-full text-left p-4 font-bold text-amber-800 hover:bg-amber-100 transition flex justify-between items-center">
+                        <span>"光音能量"听起来有些抽象，它到底是什么？</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content px-4">
+                        <div class="pb-4 text-gray-700">
+                            <p>您可以将其理解为一种遍布宇宙的、滋养万物的生命能量。本课程将通过具体的方法，教您如何感知、连接并引导这种自然能量，来清理身体的负能量，补充生命活力。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 问题4 -->
+                <div class="accordion bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="accordion-btn w-full text-left p-4 font-bold text-amber-800 hover:bg-amber-100 transition flex justify-between items-center">
+                        <span>孩子和老人免费参加，需要有付费学员陪同吗？</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content px-4">
+                        <div class="pb-4 text-gray-700">
+                            <p>是的，为了确保学习效果和现场管理，我们建议每位享受免费政策的青少年或长者，都由至少一位付费报名的成年家属陪同参加。这是一个极好的家庭共同学习、增进感情的机会。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 问题5 -->
+                <div class="accordion bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="accordion-btn w-full text-left p-4 font-bold text-amber-800 hover:bg-amber-100 transition flex justify-between items-center">
+                        <span>课程需要准备什么吗？</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content px-4">
+                        <div class="pb-4 text-gray-700">
+                            <p>请穿着宽松舒适的衣物，并怀着一颗开放、爱与好奇的心前来即可。建议自备水杯，保持水分充足。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-amber-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-2xl font-bold">光音能量自疗课</h3>
+                    <p class="text-amber-200">让爱成为最好的疗愈师</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-amber-200 hover:text-white transition" id="wechat-link">
+                        <i class="fab fa-weixin text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-amber-700 mt-6 pt-6 text-center text-sm text-amber-200">
+                <p>© 2025 光音能量自疗课 版权所有</p>
+                <p class="mt-2">愿爱与健康的光芒照亮每一个家庭</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 二维码弹出层 -->
+    <div id="qrcode-modal" class="modal">
+        <div class="modal-content">
+            <img src="assets/images/qcode.jpg" alt="微信二维码">
+            <br>
+            <button class="close-btn" id="close-modal">关闭</button>
+        </div>
+    </div>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // 手风琴效果
+        document.querySelectorAll('.accordion-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const accordion = button.parentElement;
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                accordion.classList.toggle('active');
+                
+                if (accordion.classList.contains('active')) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    content.style.maxHeight = '0';
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // 如果是移动端菜单，点击后隐藏菜单
+                if (window.innerWidth < 768) {
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+
+        // 微信二维码弹出层
+        const wechatLink = document.getElementById('wechat-link');
+        const registerLink = document.getElementById('register-link');
+        const modal = document.getElementById('qrcode-modal');
+        const closeBtn = document.getElementById('close-modal');
+
+        // 点击微信图标显示弹出层
+        wechatLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            modal.style.display = 'block';
+        });
+
+        // 点击报名按钮显示弹出层
+        registerLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            modal.style.display = 'block';
+        });
+
+        // 点击关闭按钮隐藏弹出层
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+        // 点击弹出层背景（非内容区域）也关闭弹出层
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
